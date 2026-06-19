@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar, { LOGO_URL } from './components/Navbar';
 import Hero from './components/Hero';
 import ServiceCard from './components/ServiceCard';
@@ -163,7 +164,7 @@ export default function App() {
                 )}
               </div>
               <span className="font-heading text-lg font-extrabold text-neutral-100 tracking-tight">
-                Native 254 Techs
+                Native 254 
               </span>
             </div>
             <p className="text-xs text-neutral-500 max-w-sm leading-relaxed">
