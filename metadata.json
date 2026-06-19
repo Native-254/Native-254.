@@ -1,0 +1,6 @@
+{
+  "name": "Native 254",
+  "description": "Premium IT Solutions & Education platform. Custom PC building, troubleshooting, web hosting, NAS creation, and technical courses (Programming, Microsoft Suite, Graphics Design).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
