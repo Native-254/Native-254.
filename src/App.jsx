@@ -8,6 +8,8 @@ const Solutions = lazy(() => import("./pages/Solutions"));
 const Courses = lazy(() => import("./pages/Courses"));
 const Cart = lazy(() => import("./pages/Cart"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Terms = lazy(() => import("./pages/Terms"));
+const Privacy = lazy(() => import("./pages/Privacy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 function ScrollToTop() {
@@ -45,6 +47,8 @@ export default function App() {
             <Route path="/courses" element={<Courses />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

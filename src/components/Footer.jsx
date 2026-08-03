@@ -59,7 +59,11 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-line px-5 md:px-8 py-5 text-xs text-steel font-mono flex flex-col sm:flex-row gap-2 justify-between max-w-6xl mx-auto">
-        <span>© {new Date().getFullYear()} Native254. All rights reserved.</span>
+        <div className="flex flex-wrap items-center gap-3">
+          <span>© {new Date().getFullYear()} Native254. All rights reserved.</span>
+          <NavLink to="/terms" className="hover:text-yolk">Terms</NavLink>
+          <NavLink to="/privacy" className="hover:text-yolk">Privacy</NavLink>
+        </div>
         <span>Built in Nairobi.</span>
       </div>
     </footer>
