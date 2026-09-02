@@ -108,7 +108,7 @@ export const services = [
     description:
       "Builds matched to your budget and use case, benchmarked and stress-tested before handover. Parts costed separately.",
     price: 8000,
-    priceLabel: "From KES 8,000",
+    priceLabel: "Price is budget-dependent",
     priceNote: "labour, parts extra",
     image: svcPcbuild,
     bullets: [
