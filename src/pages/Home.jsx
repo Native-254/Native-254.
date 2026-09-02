@@ -78,6 +78,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* COMPANY INTRO — short positioning statement before the offering previews */}
+      <section className="bg-paper text-ink border-b border-black/10">
+        <div className="max-w-6xl mx-auto px-5 md:px-8 py-12 md:py-14 grid md:grid-cols-[auto_1fr] gap-6 md:gap-10 items-start">
+          <p className="mono-eyebrow text-rust">About Native254</p>
+          <div className="max-w-3xl">
+            <h2 className="font-display font-black text-3xl md:text-4xl leading-tight">
+              Practical technology for the work people do every day.
+            </h2>
+            <p className="mt-4 text-ink/70 leading-relaxed">
+              Native254 is a Nairobi technology company helping homes,
+              businesses and students get more from their tools. We combine
+              dependable IT support, thoughtful digital services and practical
+              training with software products built for real-world use.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* FEATURED IT SOLUTIONS */}
       <section className="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20">
         <div className="flex items-end justify-between mb-8 flex-wrap gap-3">
@@ -128,6 +146,31 @@ export default function Home() {
               loading="lazy"
             />
           </div>
+        </div>
+      </section>
+
+      {/* TECHNOLOGY PRODUCT — separate from the service and education offerings */}
+      <section className="bg-ink2 border-b border-line grain">
+        <div className="max-w-6xl mx-auto px-5 md:px-8 py-14 md:py-16 grid md:grid-cols-[1fr_auto] gap-8 md:gap-12 items-center">
+          <div>
+            <p className="mono-eyebrow text-yolk mb-2">03 — Automation &amp; Software</p>
+            <h2 className="font-display font-black text-3xl md:text-4xl text-paper leading-tight">
+              Technology products built beyond the brief.
+            </h2>
+            <p className="mt-4 text-steel max-w-2xl leading-relaxed">
+              Irietrade is Native254's automated NYSE trading bot, developed as
+              a separate software product. Visit its dedicated website for the
+              product details, access and terms of use.
+            </p>
+          </div>
+          <a
+            href="https://irietrade.me"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-yolk text-ink font-mono font-bold px-5 py-3 rounded-sm hover:bg-paper transition-colors whitespace-nowrap"
+          >
+            Visit Irietrade <ArrowRight size={16} />
+          </a>
         </div>
       </section>
 
