@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { company } from "../data/company";
 
 export default function Footer() {
   return (
@@ -31,14 +32,14 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2">
               <Phone size={15} className="text-yolk shrink-0" />
-              <a href="https://wa.me/254716369996" className="hover:text-yolk">
-                0716 369 996 (WhatsApp)
+              <a href={`https://wa.me/${company.whatsappNumber}`} className="hover:text-yolk">
+                {company.whatsappDisplay} (WhatsApp)
               </a>
             </li>
             <li className="flex items-center gap-2">
               <Mail size={15} className="text-yolk shrink-0" />
-              <a href="mailto:info.native@gmail.com" className="hover:text-yolk break-all">
-                info.native@gmail.com
+              <a href={`mailto:${company.email}`} className="hover:text-yolk break-all">
+                {company.email}
               </a>
             </li>
             <li className="flex items-center gap-2">

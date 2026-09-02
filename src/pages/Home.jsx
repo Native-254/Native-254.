@@ -7,6 +7,7 @@ import halftoneMegaphone from "../assets/halftone-megaphone.webp";
 import booksStack from "../assets/books-stack.webp";
 import retroPhone from "../assets/retro-phone.webp";
 import { usePageMeta } from "../lib/usePageMeta";
+import { company } from "../data/company";
 
 export default function Home() {
   usePageMeta(
@@ -178,10 +179,10 @@ export default function Home() {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a
-                href="https://wa.me/254716369996"
+                href={`https://wa.me/${company.whatsappNumber}`}
                 className="inline-flex items-center gap-2 bg-yolk text-ink font-mono font-bold px-5 py-3 rounded-sm hover:bg-paper transition-colors"
               >
-                <Phone size={16} /> 0716 369 996
+                <Phone size={16} /> {company.whatsappDisplay}
               </a>
               <Link
                 to="/contact"

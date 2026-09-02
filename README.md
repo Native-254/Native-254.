@@ -43,10 +43,9 @@ vercel
   and course card images) and `src/assets/*.webp` (hero CRT monitor,
   disclaimer band graphic, contact phone, cart illustrations) is a stand-in.
   Swap the files, keep the same names, and the site picks them up automatically.
-- **Payment details**: `src/pages/Cart.jsx` → `PAYMENT_METHODS` array has
-  placeholder Paybill/Till/bank numbers — update with the real ones.
-- **WhatsApp/email**: search the project for `254716369996` and
-  `info.native@gmail.com` if either ever changes.
+- **Payment and contact details**: update `src/data/company.js` if the
+  M-Pesa number, Family Bank Paybill/account, WhatsApp number, or email ever
+  changes.
 
 ## Project structure
 

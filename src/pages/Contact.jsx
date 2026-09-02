@@ -1,6 +1,7 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import retroPhone from "../assets/retro-phone.webp";
 import { usePageMeta } from "../lib/usePageMeta";
+import { company } from "../data/company";
 
 export default function Contact() {
   usePageMeta(
@@ -14,7 +15,7 @@ export default function Contact() {
     const name = form.name.value.trim();
     const message = form.message.value.trim();
     const body = `From: ${name}\n\n${message}`;
-    window.location.href = `mailto:info.native@gmail.com?subject=${encodeURIComponent(
+    window.location.href = `mailto:${company.email}?subject=${encodeURIComponent(
       "Website enquiry — Native254"
     )}&body=${encodeURIComponent(body)}`;
   }
@@ -48,16 +49,16 @@ export default function Contact() {
               <span className="w-10 h-10 rounded-sm border border-line flex items-center justify-center text-yolk shrink-0">
                 <Phone size={18} />
               </span>
-              <a href="https://wa.me/254716369996" className="hover:text-yolk">
-                0716 369 996 — WhatsApp
+              <a href={`https://wa.me/${company.whatsappNumber}`} className="hover:text-yolk">
+                {company.whatsappDisplay} — WhatsApp
               </a>
             </li>
             <li className="flex items-center gap-3 text-paper">
               <span className="w-10 h-10 rounded-sm border border-line flex items-center justify-center text-yolk shrink-0">
                 <Mail size={18} />
               </span>
-              <a href="mailto:info.native@gmail.com" className="hover:text-yolk break-all">
-                info.native@gmail.com
+              <a href={`mailto:${company.email}`} className="hover:text-yolk break-all">
+                {company.email}
               </a>
             </li>
             <li className="flex items-center gap-3 text-paper">
@@ -126,7 +127,7 @@ export default function Contact() {
           </button>
           <p className="text-xs text-steel">
             This opens your email app with the message pre-filled to
-            info.native@gmail.com.
+            {company.email}.
           </p>
         </form>
       </div>

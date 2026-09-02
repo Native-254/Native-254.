@@ -7,40 +7,18 @@ import { downloadInvoice } from "../lib/invoice";
 import wireCart from "../assets/wire-cart.webp";
 import cashStack from "../assets/cash-stack.webp";
 import { usePageMeta } from "../lib/usePageMeta";
-
-const PAYMENT_METHODS = [
-  {
-    id: "mpesa-paybill",
-    label: "M-Pesa Paybill",
-    detail: "Paybill 000000 · Account: your name",
-  },
-  {
-    id: "mpesa-till",
-    label: "M-Pesa Till Number",
-    detail: "Till 000000",
-  },
-  {
-    id: "bank",
-    label: "Bank Transfer",
-    detail: "Native254 · Acc. 0000000000",
-  },
-  {
-    id: "cash",
-    label: "Cash on completion",
-    detail: "For in-person services only",
-  },
-];
+import { company, paymentMethods } from "../data/company";
 
 export default function Cart() {
   usePageMeta("Your Cart", "Review your selected IT solutions and courses, choose a payment method and confirm your order.");
 
   const { items, removeItem, setQty, total, clearCart } = useCart();
-  const [method, setMethod] = useState(PAYMENT_METHODS[0].id);
+  const [method, setMethod] = useState(paymentMethods[0].id);
   const [invoiceNo] = useState(() => makeInvoiceNumber());
   const [generating, setGenerating] = useState(false);
 
   const methodLabel = useMemo(
-    () => PAYMENT_METHODS.find((m) => m.id === method)?.label ?? "",
+    () => paymentMethods.find((m) => m.id === method)?.label ?? "",
     [method]
   );
 
@@ -56,8 +34,8 @@ export default function Cart() {
     ].join("\n");
   }, [items, total, methodLabel, invoiceNo]);
 
-  const whatsappHref = `https://wa.me/254716369996?text=${encodeURIComponent(messageBody)}`;
-  const emailHref = `mailto:info.native@gmail.com?subject=${encodeURIComponent(
+  const whatsappHref = `https://wa.me/${company.whatsappNumber}?text=${encodeURIComponent(messageBody)}`;
+  const emailHref = `mailto:${company.email}?subject=${encodeURIComponent(
     `Native254 order — Invoice ${invoiceNo}`
   )}&body=${encodeURIComponent(messageBody)}`;
 
@@ -189,7 +167,7 @@ export default function Cart() {
               Payment method
             </p>
             <div className="space-y-2">
-              {PAYMENT_METHODS.map((m) => (
+              {paymentMethods.map((m) => (
                 <label
                   key={m.id}
                   className={`flex items-start gap-3 border rounded-sm p-3 cursor-pointer transition-colors ${
@@ -232,7 +210,7 @@ export default function Cart() {
               href={emailHref}
               className="w-full inline-flex items-center justify-center gap-2 border border-ink px-4 py-3 rounded-sm hover:bg-ink hover:text-paper transition-colors text-sm"
             >
-              <Mail size={16} /> Email info.native@gmail.com
+              <Mail size={16} /> Email {company.email}
             </a>
             <button
               onClick={async () => {
@@ -251,8 +229,8 @@ export default function Cart() {
           </div>
 
           <p className="text-[11px] text-ink/50 mt-4 leading-relaxed">
-            After paying, send your confirmation to 0716 369 996 on WhatsApp
-            or to info.native@gmail.com, quoting invoice #{invoiceNo}.
+            After paying, send your confirmation to {company.whatsappDisplay} on WhatsApp
+            or to {company.email}, quoting invoice #{invoiceNo}.
           </p>
         </div>
       </div>

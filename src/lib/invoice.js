@@ -1,4 +1,5 @@
 import { formatKES, makeInvoiceNumber } from "./format";
+import { company } from "../data/company";
 
 export async function downloadInvoice({ items, total, paymentMethod }) {
   const { jsPDF } = await import("jspdf");
@@ -84,12 +85,12 @@ export async function downloadInvoice({ items, total, paymentMethod }) {
   doc.text("1. Complete payment using the method above.", marginX, y);
   y += 14;
   doc.text(
-    "2. Send your payment confirmation message to 0716 369 996 (WhatsApp)",
+      `2. Send your payment confirmation message to ${company.whatsappDisplay} (WhatsApp)`,
     marginX,
     y
   );
   y += 14;
-  doc.text("   or email info.native@gmail.com with this invoice number.", marginX, y);
+  doc.text(`   or email ${company.email} with this invoice number.`, marginX, y);
   y += 30;
 
   doc.setDrawColor(220, 220, 220);
