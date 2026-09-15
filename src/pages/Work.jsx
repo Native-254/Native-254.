@@ -10,7 +10,7 @@ export default function Work() {
     {
       id: "irieflow",
       name: "IrieFlow",
-      description: "IrieFlow is designed with a core philosophy: menstrual health data is deeply personal and belongs to the user. Unlike conventional health apps that monetize private fertility metrics or require third-party identity tracking, IrieFlow operates local-first with an embedded Room database. Users can track their cycles, symptoms, moods, and intimate health entirely offline, or opt-in to a decentralized, zero-registration Partner Sync Mode that keeps loved ones informed with empathetic phase insights and care pings.",
+      description: "IrieFlow is designed with a core philosophy: menstrual health data is deeply personal and belongs to the user.",
       techStack: ["React", "Node.js", "SQLite", "Tailwind CSS"],
       githubUrl: "https://github.com/Native-254/irieflow",
       features: [

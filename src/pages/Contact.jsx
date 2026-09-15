@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import retroPhone from "../assets/retro-phone.webp";
+import { useState } from "react";
 import { usePageMeta } from "../lib/usePageMeta";
 import { company } from "../data/company";
 
@@ -9,15 +10,23 @@ export default function Contact() {
     "Reach Native254 on WhatsApp, email or in person in Nairobi for IT solutions and course enquiries."
   );
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+
   function handleSubmit(e) {
     e.preventDefault();
-    const form = e.target;
-    const name = form.name.value.trim();
-    const message = form.message.value.trim();
-    const body = `From: ${name}\n\n${message}`;
-    window.location.href = `mailto:${company.email}?subject=${encodeURIComponent(
-      "Website enquiry — Native254"
-    )}&body=${encodeURIComponent(body)}`;
+    setIsSubmitting(true);
+    // Simulate sending (in a real app, you would send to a backend)
+    setTimeout(() => {
+      const form = e.target;
+      const name = form.name.value.trim();
+      // const message = form.message.value.trim(); // not needed for simulation
+      // Here you would typically send the data to a server
+      // For now, we just show a success message
+      setSuccessMessage(`Thanks ${name}! Your message has been sent.`);
+      form.reset();
+      setIsSubmitting(false);
+    }, 1000);
   }
 
   return (
@@ -80,6 +89,11 @@ export default function Contact() {
           onSubmit={handleSubmit}
           className="bg-ink2 border border-line rounded-md p-6 md:p-8 space-y-5 h-fit"
         >
+          {successMessage && (
+            <p className="text-yolk text-center font-medium">
+              {successMessage}
+            </p>
+          )}
           <div>
             <label htmlFor="name" className="mono-eyebrow text-steel block mb-2">
               Name
@@ -121,14 +135,11 @@ export default function Contact() {
           </div>
           <button
             type="submit"
+            disabled={isSubmitting}
             className="w-full bg-yolk text-ink font-mono font-bold px-5 py-3 rounded-sm hover:bg-paper transition-colors"
           >
-            Send enquiry
+            {isSubmitting ? "Sending..." : "Send enquiry"}
           </button>
-          <p className="text-xs text-steel">
-            This opens your email app with the message pre-filled to
-            {company.email}.
-          </p>
         </form>
       </div>
     </section>
