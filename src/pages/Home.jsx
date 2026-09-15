@@ -106,7 +106,7 @@ export default function Home() {
               <div className="flex items-start gap-3">
                 <div className="flex-shrink-0">
                   <span className="w-8 h-8 rounded-sm border border-line flex items-center justify-center text-yolk">
-                    <span className="text-xs font-bold">🎯</span>
+                    <span className="text-xs font-bold"></span>
                   </span>
                 </div>
                 <div>
@@ -122,7 +122,7 @@ export default function Home() {
               <div className="flex items-start gap-3">
                 <div className="flex-shrink-0">
                   <span className="w-8 h-8 rounded-sm border border-line flex items-center justify-center text-yolk">
-                    <span className="text-xs font-bold">🔮</span>
+                    <span className="text-xs font-bold"></span>
                   </span>
                 </div>
                 <div>
@@ -138,7 +138,7 @@ export default function Home() {
               <div className="flex items-start gap-3">
                 <div className="flex-shrink-0">
                   <span className="w-8 h-8 rounded-sm border border-line flex items-center justify-center text-yolk">
-                    <span className="text-xs font-bold">💫</span>
+                    <span className="text-xs font-bold"></span>
                   </span>
                 </div>
                 <div>
@@ -176,7 +176,7 @@ export default function Home() {
             <div className="flex items-start gap-3">
               <div className="flex-shrink-0">
                 <div className="w-10 h-10 rounded-sm border border-line flex items-center justify-center text-yolk bg-yolk/10">
-                  <span className="text-xs">🔧</span>
+                  <span className="text-xs"></span>
                 </div>
               </div>
               <div>
@@ -191,7 +191,7 @@ export default function Home() {
             <div className="flex items-start gap-3">
               <div className="flex-shrink-0">
                 <div className="w-10 h-10 rounded-sm border border-line flex items-center justify-center text-yolk bg-yolk/10">
-                  <span className="text-xs">🌐</span>
+                  <span className="text-xs"></span>
                 </div>
               </div>
               <div>
@@ -206,7 +206,7 @@ export default function Home() {
             <div className="flex items-start gap-3">
               <div className="flex-shrink-0">
                 <div className="w-10 h-10 rounded-sm border border-line flex items-center justify-center text-yolk bg-yolk/10">
-                  <span className="text-xs">💻</span>
+                  <span className="text-xs"></span>
                 </div>
               </div>
               <div>
@@ -221,7 +221,7 @@ export default function Home() {
             <div className="flex items-start gap-3">
               <div className="flex-shrink-0">
                 <div className="w-10 h-10 rounded-sm border border-line flex items-center justify-center text-yolk bg-yolk/10">
-                  <span className="text-xs">🖥️</span>
+                  <span className="text-xs"></span>
                 </div>
               </div>
               <div>
@@ -254,7 +254,7 @@ export default function Home() {
               <div className="flex items-start gap-3">
                 <div className="flex-shrink-0">
                   <div className="w-10 h-10 rounded-sm border border-line flex items-center justify-center text-yolk bg-yolk/10">
-                    <span className="text-xs">📄</span>
+                    <span className="text-xs"></span>
                   </div>
                 </div>
                 <div>
@@ -269,7 +269,7 @@ export default function Home() {
               <div className="flex items-start gap-3">
                 <div className="flex-shrink-0">
                   <div className="w-10 h-10 rounded-sm border border-line flex items-center justify-center text-yolk bg-yolk/10">
-                    <span className="text-xs">💻</span>
+                    <span className="text-xs"></span>
                   </div>
                 </div>
                 <div>
@@ -284,7 +284,7 @@ export default function Home() {
               <div className="flex items-start gap-3">
                 <div className="flex-shrink-0">
                   <div className="w-10 h-10 rounded-sm border border-line flex items-center justify-center text-yolk bg-yolk/10">
-                    <span className="text-xs">🎨</span>
+                    <span className="text-xs"></span>
                   </div>
                 </div>
                 <div>
