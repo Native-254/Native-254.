@@ -10,14 +10,14 @@ export default function Work() {
     {
       id: "irieflow",
       name: "IrieFlow",
-      description: "A comprehensive point-of-sale and inventory management system designed for small businesses, featuring offline sync, multi-user support, and comprehensive reporting.",
+      description: "IrieFlow is designed with a core philosophy: menstrual health data is deeply personal and belongs to the user. Unlike conventional health apps that monetize private fertility metrics or require third-party identity tracking, IrieFlow operates local-first with an embedded Room database. Users can track their cycles, symptoms, moods, and intimate health entirely offline, or opt-in to a decentralized, zero-registration Partner Sync Mode that keeps loved ones informed with empathetic phase insights and care pings.",
       techStack: ["React", "Node.js", "SQLite", "Tailwind CSS"],
       githubUrl: "https://github.com/Native-254/irieflow",
       features: [
-        "Offline-first capability",
-        "Inventory tracking",
-        "Sales reporting",
-        "Multi-location support",
+        "Comprehensive Daily Health Journal",
+        "Period Flow Tracking",
+        "Mood Logging",
+        "Physical Symptoms Tracking",
         "User role management"
       ],
       image: "/src/assets/cash-stack.webp" // Using available asset as placeholder
@@ -60,7 +60,7 @@ export default function Work() {
       <h1 className="font-display font-black text-4xl md:text-5xl text-paper max-w-2xl">
         Technology Solutions We've Built
       </h1>
-      <p className="mt-4 text-steel max-w-xl leading-relaxed">
+      <p className="mt-4 text-paper max-w-xl leading-relaxed">
         Explore the projects and solutions we've developed to solve real-world
         problems for businesses, individuals, and educational institutions.
       </p>
@@ -91,7 +91,7 @@ export default function Work() {
 
             <div className="p-6 flex flex-col flex-1">
               <h2 className="font-display font-black text-xl mb-3">{project.name}</h2>
-              <p className="text-ink/60 flex-1 mb-5 leading-relaxed">
+              <p className="text-paper flex-1 mb-5 leading-relaxed">
                 {project.description}
               </p>
 
@@ -113,7 +113,7 @@ export default function Work() {
               {/* Features */}
               <div className="mb-5">
                 <p className="mono-eyebrow text-yolk mb-1">Key Features</p>
-                <ul className="space-y-2 text-ink/60">
+                <ul className="space-y-2 text-paper">
                   {project.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-2">
                       <span className="flex-shrink-0 mt-0.5">
@@ -143,7 +143,7 @@ export default function Work() {
 
       {/* Call to Action */}
       <div className="mt-16 text-center">
-        <p className="text-ink/60 max-w-md mx-auto">
+        <p className="text-paper max-w-md mx-auto">
           Interested in a custom technology solution for your business or
           organization? Let's discuss how we can build something tailored to
           your specific needs.
