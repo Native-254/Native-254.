@@ -78,59 +78,225 @@ export default function Home() {
         </div>
       </section>
 
-      {/* COMPANY INTRO — short positioning statement before the offering previews */}
+      {/* COMPANY INTRO — enhanced about section with mission, vision, and visuals */}
       <section className="bg-paper text-ink border-b border-black/10">
-        <div className="max-w-6xl mx-auto px-5 md:px-8 py-12 md:py-14 grid md:grid-cols-[auto_1fr] gap-6 md:gap-10 items-start">
-          <p className="mono-eyebrow text-rust">About Native254</p>
-          <div className="max-w-3xl">
+        <div className="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20 grid md:grid-cols-[1fr_auto] gap-8 md:gap-12 items-center">
+          <div className="max-w-[400px]">
+            <img
+              src="/src/assets/cash-stack.webp"
+              alt="Native254 team working on technology solutions"
+              className="w-full rounded-lg shadow-lg"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <p className="mono-eyebrow text-rust">About Native254</p>
             <h2 className="font-display font-black text-3xl md:text-4xl leading-tight">
-              Practical technology for the work people do every day.
+              Empowering Nairobi Through Practical Technology
             </h2>
-            <p className="mt-4 text-ink/70 leading-relaxed">
-              Native254 is a Nairobi technology company helping homes,
-              businesses and students get more from their tools. We combine
-              dependable IT support, thoughtful digital services and practical
-              training with software products built for real-world use.
+            <p className="mt-4 text-ink/70 leading-relaxed mb-6">
+              Native254 is a Nairobi-based technology solutions provider dedicated to
+              empowering homes, businesses, and educational institutions with reliable
+              IT services, innovative software, and practical skills training. We bridge
+              the gap between complex technology and everyday usability, ensuring our
+              clients get measurable value from their technology investments.
             </p>
+
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0">
+                  <span className="w-8 h-8 rounded-sm border border-line flex items-center justify-center text-yolk">
+                    <span className="text-xs font-bold">🎯</span>
+                  </span>
+                </div>
+                <div>
+                  <p className="text-ink/80 font-medium">Our Mission</p>
+                  <p className="text-ink/60 leading-relaxed">
+                    To provide accessible, high-quality technology solutions that
+                    drive productivity, innovation, and growth for our clients across
+                    Nairobi and beyond.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0">
+                  <span className="w-8 h-8 rounded-sm border border-line flex items-center justify-center text-yolk">
+                    <span className="text-xs font-bold">🔮</span>
+                  </span>
+                </div>
+                <div>
+                  <p className="text-ink/80 font-medium">Our Vision</p>
+                  <p className="text-ink/60 leading-relaxed">
+                    To be Nairobi's most trusted technology partner, known for
+                    delivering solutions that are not just technically excellent,
+                    but truly transformative for the people and organizations we serve.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0">
+                  <span className="w-8 h-8 rounded-sm border border-line flex items-center justify-center text-yolk">
+                    <span className="text-xs font-bold">💫</span>
+                  </span>
+                </div>
+                <div>
+                  <p className="text-ink/80 font-medium">Our Values</p>
+                  <p className="text-ink/60 leading-relaxed">
+                    Reliability • Innovation • Transparency • Education •
+                    Customer-Centricity
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* FEATURED IT SOLUTIONS */}
+      {/* IT SOLUTIONS SUMMARY */}
       <section className="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20">
         <div className="flex items-end justify-between mb-8 flex-wrap gap-3">
           <div>
             <p className="mono-eyebrow text-yolk mb-2">01 — IT Solutions</p>
             <h2 className="font-display font-black text-4xl text-paper">
-              Fixed, hosted, built.
+              Comprehensive Technology Services
             </h2>
           </div>
           <Link
             to="/solutions"
             className="mono-eyebrow text-steel hover:text-yolk flex items-center gap-1.5"
           >
-            View all services <ArrowRight size={14} />
+            View All Services <ArrowRight size={14} />
           </Link>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {featuredServices.map((s) => (
-            <ServiceCard key={s.id} service={s} />
-          ))}
+        <div className="grid gap-6 md:grid-cols-2">
+          {/* Service Categories Summary */}
+          <div className="space-y-4">
+            <div className="flex items-start gap-3">
+              <div className="flex-shrink-0">
+                <div className="w-10 h-10 rounded-sm border border-line flex items-center justify-center text-yolk bg-yolk/10">
+                  <span className="text-xs">🔧</span>
+                </div>
+              </div>
+              <div>
+                <h3 className="font-display font-black text-lg">Technical Support</h3>
+                <p className="text-ink/60 leading-relaxed">
+                  Troubleshooting, repairs, and maintenance for computers,
+                  networks, and systems to keep your technology running smoothly.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <div className="flex-shrink-0">
+                <div className="w-10 h-10 rounded-sm border border-line flex items-center justify-center text-yolk bg-yolk/10">
+                  <span className="text-xs">🌐</span>
+                </div>
+              </div>
+              <div>
+                <h3 className="font-display font-black text-lg">Web & Hosting</h3>
+                <p className="text-ink/60 leading-relaxed">
+                  Professional website design, development, and managed hosting
+                  solutions that are fast, secure, and optimized for performance.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <div className="flex-shrink-0">
+                <div className="w-10 h-10 rounded-sm border border-line flex items-center justify-center text-yolk bg-yolk/10">
+                  <span className="text-xs">💻</span>
+                </div>
+              </div>
+              <div>
+                <h3 className="font-display font-black text-lg">Software & Systems</h3>
+                <p className="text-ink/60 leading-relaxed">
+                  Custom software development, system installations, and IT
+                  project management tailored to your specific business needs.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <div className="flex-shrink-0">
+                <div className="w-10 h-10 rounded-sm border border-line flex items-center justify-center text-yolk bg-yolk/10">
+                  <span className="text-xs">🖥️</span>
+                </div>
+              </div>
+              <div>
+                <h3 className="font-display font-black text-lg">Hardware Solutions</h3>
+                <p className="text-ink/60 leading-relaxed">
+                  Custom PC builds, NAS storage solutions, and hardware
+                  procurement with expert configuration and setup.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Visual representation - using a service card as example */}
+          <div className="flex justify-center">
+            <ServiceCard service={services[0]} />
+          </div>
         </div>
       </section>
 
-      {/* COURSES PREVIEW — paper/light section, books image is a light-bg asset so it sits flush here */}
+      {/* EDUCATION SERVICES SUMMARY */}
       <section className="bg-paper text-ink border-y border-black/10">
         <div className="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <p className="mono-eyebrow text-rust mb-2">02 — Education Services</p>
             <h2 className="font-display font-black text-4xl leading-tight">
-              Skills that outlast the syllabus.
+              Practical Skills for Real-World Success
             </h2>
-            <p className="mt-4 text-ink/70 max-w-md leading-relaxed">
-              Microsoft Office, programming and graphic design — taught in
-              small groups, priced for students, built for real jobs.
-            </p>
+            <div className="space-y-4">
+              {/* Course Tracks Summary */}
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0">
+                  <div className="w-10 h-10 rounded-sm border border-line flex items-center justify-center text-yolk bg-yolk/10">
+                    <span className="text-xs">📄</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-display font-black text-lg">Microsoft Office Mastery</h3>
+                  <p className="text-ink/60 leading-relaxed">
+                    Word, Excel, PowerPoint & Outlook — taught the way you'll actually
+                    use them at work, from formatting to advanced features.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0">
+                  <div className="w-10 h-10 rounded-sm border border-line flex items-center justify-center text-yolk bg-yolk/10">
+                    <span className="text-xs">💻</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-display font-black text-lg">Computer Programming</h3>
+                  <p className="text-ink/60 leading-relaxed">
+                    Web development, databases & C# programming — build real projects
+                    and gain job-ready software development skills.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0">
+                  <div className="w-10 h-10 rounded-sm border border-line flex items-center justify-center text-yolk bg-yolk/10">
+                    <span className="text-xs">🎨</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-display font-black text-lg">Graphics & Design</h3>
+                  <p className="text-ink/60 leading-relaxed">
+                    Social media graphics, photo editing & branding using Canva, GIMP,
+                    Affinity & Adobe tools — create professional designs for business.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <Link
               to="/courses"
               className="mt-6 inline-flex items-center gap-2 bg-ink text-paper font-mono font-bold px-5 py-3 rounded-sm hover:bg-rust transition-colors"

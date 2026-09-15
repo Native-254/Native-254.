@@ -2,7 +2,7 @@ export const company = {
   name: "Native254",
   whatsappNumber: "254716369996",
   whatsappDisplay: "0716 369 996",
-  email: "info.native@gmail.com",
+  email: "info.native254@gmail.com",
 };
 
 export const paymentMethods = [

@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 
 const Solutions = lazy(() => import("./pages/Solutions"));
 const Courses = lazy(() => import("./pages/Courses"));
+const Work = lazy(() => import("./pages/Work"));
 const Cart = lazy(() => import("./pages/Cart"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Terms = lazy(() => import("./pages/Terms"));
@@ -45,6 +46,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/courses" element={<Courses />} />
+            <Route path="/work" element={<Work />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/terms" element={<Terms />} />
